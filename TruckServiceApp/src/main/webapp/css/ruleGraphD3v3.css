@@ -1,0 +1,38 @@
+.node {
+	cursor: pointer;
+}
+
+.overlay {
+	background-color: white;
+}
+
+.node circle {
+	fill: white;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+
+.node text {
+	font-size: 12px;
+	font-family: Georgia;
+}
+
+.link {
+	fill: none;
+	stroke: light grey;
+	stroke-width: 1.5px;
+}
+
+.templink {
+	fill: none;
+	stroke: light orange;
+	stroke-width: 1.5px;
+}
+
+.ghostCircle.show {
+	display: block;
+}
+
+.ghostCircle, .activeDrag .ghostCircle {
+	display: none;
+}

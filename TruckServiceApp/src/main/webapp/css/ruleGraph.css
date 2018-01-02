@@ -1,0 +1,30 @@
+.node text {
+	font: 10px Georgia;
+}
+
+.node circle {
+	fill: blue;
+}
+
+.node --action circle {
+	fill: yellow;
+}
+
+.node --time circle {
+	fill: black;
+}
+
+.node --condition circle {
+	fill: purple;
+}
+
+.node --activation circle{
+	fill: red;
+}
+
+.link {
+	fill: none;
+	stroke: #555;
+	stroke-opacity: 0.4;
+	stroke-width: 1.5px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="" type="image">
+	<title>Truck Service Map Portal</title>
+	<link rel="stylesheet" href="css/layout.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#truckReviewNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="truckReviewNav">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#truckMap">Truck Map</a></li>
+        <li><a href="#truckInfoTable">Truck Info Table</a></li>
+        <li><a href="#overallTruckMetrics">Overall Truck Metrics</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="home.html">Truck Tracking Service Portal</a></li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<div class="jumbotron text-center">
+		<h2>From truck review you can view:</h2>
+		<ul>
+			<li>Where deployed trucks are going</li>
+			<li>Information regarding each truck like status, etc.</li>
+			<li>Overall truck metrics</li>
+		</ul>
+	</div>
+	
+	<div class="panel panel-info">
+		<div class="panel-heading">Trucks Currently Dispatched</div>
+		<div class="panel-body" id="truckMap">
+			<div id="truckGoogleMap"></div>
+		</div>
+		<!-- <div class="panel-footer" ></div> -->
+	</div>
+	
+	<div class="panel panel-info">
+		<div class="panel-heading">Truck Information Table</div>
+		<div class="panel-body" id="truckInfoTable">
+			<table id="trucksInfo" class="table table-bordered"></table>
+		</div>
+		<div class="panel-footer" id="tableBttns"></div>
+	</div>
+	
+	<div class="panel panel-info">
+		<div class="panel-heading">Overall Truck Metrics</div>
+		<div class="panel-body" id="overallTruckMetrics">
+		</div>
+	</div>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<!-- Google Road Map API key for this project AIzaSyAKJf6luAXkQibpGmB6y08SJOQJBZCEEp0 -->
+<!-- Google JS Map API key for this project AIzaSyCPvN4gWS_GfNejIV5rPqU_bZfqd6pc90A -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPvN4gWS_GfNejIV5rPqU_bZfqd6pc90A&callback=serviceTruckMap"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.16/b-1.5.1/b-colvis-1.5.1/b-html5-1.5.1/b-print-1.5.1/r-2.2.1/datatables.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/b-1.5.1/b-colvis-1.5.1/b-html5-1.5.1/b-print-1.5.1/r-2.2.1/datatables.min.js"></script>
+<script src="js/truckGoogleMapScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+id, value
+rules,
+rules.morning check,
+rules.morning check.returns morning services,
+rules.morning check.returns morning services.activation,
+rules.morning check.returns morning services.activation.n
+rules.morning check.returns morning services.time,
+rules.morning check.returns morning services.time.6 am - 8 am
+rules.morning check.returns morning services.condition,
+rules.morning check.returns morning services.condition.when services > 10
+rules.morning check.returns morning services.condition.when 10 services have low status
+rules.morning check.routine check,
+rules.morning check.routine check.activation,
+rules.morning check.routine check.activation.y
+rules.morning check.routine check.time,
+rules.morning check.routine check.time.6 am - 8 am
+rules.morning check.routine check.condition, 
+rules.morning check.routine check.condition.when services >= 5
+rules.morning check.routine check.condition.when trucks deployed >= 5
+rules.afternoon check,
+rules.afternoon check.returns afternoon services,
+rules.afternoon check.returns afternoon services.activation,
+rules.afternoon check.returns afternoon services.activation.n
+rules.afternoon check.returns afternoon services.time,
+rules.afternoon check.returns afternoon services.time.9 am - 12 pm
+rules.afternoon check.returns afternoon services.time.1 pm - 5 pm
+rules.afternoon check.returns afternoon services.condition, 
+rules.afternoon check.returns afternoon services.condition.when services > 20
+rules.afternoon check.returns afternoon services.condition.when services < 5
+rules.afternoon check.returns afternoon services.condition.when trucks deployed >= 10
+rules.afternoon check.routine check, 
+rules.afternoon check.routine check.activation,
+rules.afternoon check.routine check.activation.y
+rules.afternoon check.routine check.time,
+rules.afternoon check.routine check.time.9 am - 12 pm
+rules.afternoon check.routine check.time.1 pm - 5 pm
+rules.afternoon check.routine check.condition,
+rules.afternoon check.routine check.condition.when services >= 15
+rules.afternoon check.routine check.condition.when trucks deployed >= 6
+rules.evening check,
+rules.evening check.returns evening services,
+rules.evening check.returns evening services.activation,
+rules.evening check.returns evening services.activation.y
+rules.evening check.returns evening services.time, 
+rules.evening check.returns evening services.time.12 pm - 5 am
+rules.evening check.returns evening services.time.6 pm - 5 am
+rules.evening check.returns evening services.condition, 
+rules.evening check.returns evening services.condition.when services < 5 && trucks deployed >= 6
+rules.evening check.returns evening services.condition.when services <= 4 || trucks deployed <= 2
+rules.evening check.routine check,
+rules.evening check.routine check.activation,
+rules.evening check.routine check.activation.n
+rules.evening check.routine check.time, 
+rules.evening check.routine check.time.1 pm - 10 pm
+rules.evening check.routine check.time.10 pm - 5 am
+rules.evening check.routine check.condition,
+rules.evening check.routine check.condition.when services = 0 || trucks deployed = 0
+rules.evening check.routine check.condition.when services < 5 && trucks deployed > 5
+rules.evening check.routine check.condition.when trucks deployed > 10

@@ -1,0 +1,155 @@
+{
+ "name": "rules",
+ "children": [
+  {
+   "name": "morning check",
+   "children": [
+    {
+     "name": "returns morning services",
+     "children": [
+      {"name": "activation", "value": "n"},
+      {"name": "time", "value": "6 am - 8 am"},
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", "value": "when services > 10"},
+        {"name": "condition2", "value": "when 10 services have low status"}
+       ]
+      }
+      ]
+      }
+   ]
+  },
+   {
+    "name": "morning routine check",
+    "children": [
+     {
+     "name": "performs morning routine check",
+     "children": [
+      {"name": "activation", "value": "y"},
+      {"name": "time", "value": "6 am - 8 am"},
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", "value": "when services >= 5"},
+        {"name": "condition2", "value": "when trucks deployed >= 5"}
+       ]}
+      ]
+      }
+    ]
+   },
+   {
+    "name": "afternoon check",
+    "children": [
+    {
+     "name": "returns afternoon services",
+     "children": [
+      {"name": "activation", "value": "n"},
+      {"name": "time", 
+       "children": [
+        {"name": "interval1", "value": "9 am - 12 pm"},
+        {"name": "interval2", "value": "1 pm - 5 pm"}
+       ]
+      },
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", "value": "when services > 20"},
+        {"name": "condition2", "value": "when services < 5"},
+        {"name": "condition2", "value": "when trucks deployed >= 10"}
+       ]}
+      ]
+      }
+   ]
+   },
+   {
+    "name": "afternoon routine check",
+    "children": [
+     {
+     "name": "performs afternoon routine check",
+     "children": [
+      {"name": "activation", "value": "y"},
+      {"name": "time", 
+       "children": [
+        {"name": "interval1", "value": "9 am - 12 pm"},
+        {"name": "interval2", "value": "1 pm - 5 pm"}
+       ]
+      },
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", "value": "when services >= 15"},
+        {"name": "condition2", "value": "when trucks deployed >= 6"}
+       ]}
+      ]
+      }
+    ]
+   },
+   {
+    "name": "evening check",
+    "children": [
+     {
+     "name": "returns evening services",
+     "children": [
+      {"name": "activation", "value": "y"},
+      {"name": "time", 
+       "children": [
+        {"name": "interval1", "value": "12 am - 5 am"},
+        {"name": "interval2", "value": "6 pm - 5 am"}
+       ]
+      },
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", 
+         "children": [
+          {"name": "statement1", "value": "when services < 5"},
+          {"name": "operator1", "value": "&&"},
+          {"name": "statement2", "value": "trucks deployed >= 6"}
+         ]
+        },
+        {"name": "condition2", 
+         "children": [
+          {"name": "statement1", "value": "when services <= 4"},
+          {"name": "operator1", "value": "||"},
+          {"name": "statement2", "value": "trucks deployed <= 2"}
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+   {
+    "name": "evening routine check",
+    "children": [
+     {
+     "name": "performs evening routine check",
+     "children": [
+      {"name": "activation", "value": "y"},
+      {"name": "time", 
+       "children": [
+        {"name": "interval1", "value": "12 am - 5 am"},
+        {"name": "interval2", "value": "6 pm - 5 am"}
+       ]
+      },
+      {"name": "condition",
+       "children": [
+        {"name": "condition1", 
+         "children": [
+          {"name": "statement1", "value": "when services < 5"},
+          {"name": "operator1", "value": "&&"},
+          {"name": "statement2", "value": "trucks deployed >= 6"}
+         ]
+        },
+        {"name": "condition2", 
+         "children": [
+          {"name": "statement1", "value": "when services <= 4"},
+          {"name": "operator1", "value": "||"},
+          {"name": "statement2", "value": "trucks deployed <= 2"}
+         ]
+        }
+       ]
+   }
+  ]
+ }
+ ]
+ }
+ ]
+ }
